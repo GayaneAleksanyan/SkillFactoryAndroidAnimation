@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/buttonPanel"
+        android:layout_width="@dimen/linear_width"
+        android:layout_height="wrap_content"
+        android:layoutAnimation="@anim/layout_animation"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/button_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stateListAnimator="@animator/elevation"
+            android:text="@string/button1"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <Button
+            android:id="@+id/button_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button2" />
+
+        <Button
+            android:id="@+id/button_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button3" />
+
+        <Button
+            android:id="@+id/button_four"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button4" />
+
+        <Button
+            android:id="@+id/button_five"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button5" />
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/topPanel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/frame_height"
+        android:background="@color/design_default_color_primary"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/bottomPanel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/frame_height"
+        android:background="@color/design_default_color_primary"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
